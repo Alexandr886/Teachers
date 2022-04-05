@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Adelle Cyrillic';
+    src: local('Adelle Cyrillic Regular'), local('Adelle-Cyrillic-Regular'),
+        url('AdelleCyrillic.woff2') format('woff2'),
+        url('AdelleCyrillic.woff') format('woff'),
+        url('AdelleCyrillic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

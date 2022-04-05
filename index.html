@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Мы - учителям!</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   <link rel="shortcut icon" href="img/favicon.svg">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- первая секция - желтая -->
+   <div class="page-one">
+      <div class="container">
+         <div class="block-about">
+            <div class="about-social">
+               <div class="social-media">
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-twitter.svg" alt="twitter" class="social-media__img">
+                  </a>
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-tiktok.svg" alt="tiktok" class="social-media__img">
+                  </a>
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-yandexdzen.svg" alt="yandexdzen" class="social-media__img">
+                  </a>
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-youtube.svg" alt="youtube" class="social-media__img">
+                  </a>
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-facebook.svg" alt="facebook" class="social-media__img">
+                  </a>
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-vk.svg" alt="VK" class="social-media__img">
+                  </a>
+                  <a href="#" class="social-media__link">
+                     <img src="img/icon-instagram.svg" alt="instagram" class="social-media__img">
+                  </a>
+               </div>
+               <div class="burger-menu">
+                  <button type="button" data-modal-target="#modal" class="burger">
+                     <span class="burger__line"></span>
+                     <span class="burger__line"></span>
+                     <span class="burger__line"></span>
+                  </button>
+                  <div class="modal" id="modal">
+                     <button data-close-button class="close-button">&times;</button>
+                     <nav class="informations-item">
+                        <a href="#" class="informations-link">Поздравления</a>
+                        <a href="#" class="informations-link">О Проекте</a>
+                        <a href="#" class="informations-link">Акции</a>
+                        <a href="#" class="informations-link">Открытки</a>
+                     </nav>
+                     <div class="social-media">
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-twitter.svg" alt="twitter" class="social-media__img">
+                        </a>
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-tiktok.svg" alt="tiktok" class="social-media__img">
+                        </a>
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-yandexdzen.svg" alt="yandexdzen" class="social-media__img">
+                        </a>
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-youtube.svg" alt="youtube" class="social-media__img">
+                        </a>
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-facebook.svg" alt="facebook" class="social-media__img">
+                        </a>
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-vk.svg" alt="VK" class="social-media__img">
+                        </a>
+                        <a href="#" class="social-media__link">
+                           <img src="img/icon-instagram.svg" alt="instagram" class="social-media__img">
+                        </a>
+                     </div>
+                  </div>
+                  <div id="overlay"></div>
+               </div>
+            </div>
+            <div class="about-info-container">
+               <div class="about-info">
+                  <h1 class="title-h1">Мы – учителям!</h1>
+                  <div class="about-info-wrapper">
+                     <p class="about-info__description">«Вся гордость учителя в учениках, в росте посеянных им семян...»</p>
+                  <span class="about-info__signature">Д. Менделеев</span>
+                  </div>
+                  <button type="button" data-popupmodal-target="#popupmodal" class="play">
+                     <img src="img/icon-play-video.svg" alt="play button" class="play__img">
+                     Смотреть все поздравления
+                  </button>
+               </div>
+            </div>
+            <!-- окно с видео -->
+            <div class="popup-menu">
+               <div class="popupmodal" id="popupmodal">
+               <button data-popupclose-button class="popup-close-button">&times;</button>
+                  <iframe src="https://www.youtube.com/embed/15FchEr1oGU"></iframe>
+               </div>
+               <div id="popupoverlay"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- вторая секция - коричневая -->
+   <header class="page-two">
+      <div class="container">
+         <div class="blok-info">
+            <img src="img/photo-vertical.png" alt="" class="blok-info__img">
+            <div class="informations">
+               <nav class="informations-item">
+                  <a href="#" class="informations-link">
+                     <img src="img/info-icon01.svg" alt="congratulations" class="informations-link__img">
+                     Поздравления
+                  </a>
+                  <a href="#" class="informations-link">
+                     <img src="img/info-icon02.svg" alt="about the project" class="informations-link__img">
+                     О Проекте
+                  </a>
+                  <a href="#" class="informations-link">
+                     <img src="img/info-icon03.svg" alt="stock" class="informations-link__img">
+                     Акции
+                  </a>
+                  <a href="#" class="informations-link">
+                     <img src="img/info-icon04.svg" alt="postcards" class="informations-link__img">
+                     Открытки
+                  </a>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- третья секция - светло-бежевая с цитатами -->
+   <section class="page-three">
+      <div class="container container-quote">
+         <div class="blok-quote">
+            <div class="quote">
+               <div class="author">
+                  <div class="avatar-cover">
+                     <img src="img/author01.png" alt="Author" class="avatar-cover__img">
+                  </div>
+                  <div class="author-description">
+                     <h5 class="author-description__name">Владимир<br>Потанин</h5>
+                     <p class="author-description__signature">Директор департамента молодежи и спорта</p>
+                  </div>
+               </div>
+               <p class="quote__text">Я занимаюсь благотворительностью больше 20 лет. Это - важная часть моей жизни. В 1999 году я создал Благотворительный фонд, чтобы сделатьпроектыв сферах лет. Это - важная часть моей жизни. В 1999 году я создал Благотворительный фонд, чтобы сделатьпроектыв сферах</p>
+            </div>
+            <div class="quote">
+               <div class="author">
+                  <div class="avatar-cover">
+                     <img src="img/author02.png" alt="Author" class="avatar-cover__img">
+                  </div>
+                  <div class="author-description">
+                     <h5 class="author-description__name">Мария<br>Павловская</h5>
+                     <p class="author-description__signature">Директор департамента молодежи и спорта</p>
+                  </div>
+               </div>
+               <p class="quote__text">Я занимаюсь благотворительностью больше 20 лет. Это - важная часть моей жизни. В 1999 году я создал Благотворительный фонд, чтобы сделатьпроектыв сферах лет. Это - важная часть моей жизни. В 1999 году я создал Благотворительный фонд, чтобы сделатьпроектыв сферах</p>
+            </div>
+            <div class="quote">
+               <div class="author">
+                  <div class="avatar-cover">
+                     <img src="img/author01.png" alt="Author" class="avatar-cover__img">
+                  </div>
+                  <div class="author-description">
+                     <h5 class="author-description__name">Федор<br>Емельяненко</h5>
+                     <p class="author-description__signature">Директор департамента молодежи и спорта</p>
+                  </div>
+               </div>
+               <p class="quote__text">Я занимаюсь благотворительностью больше 20 лет. Это - важная часть моей жизни. В 1999 году я создал Благотворительный фонд, чтобы сделатьпроектыв сферах лет. Это - важная часть моей жизни.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- svg стрелка навигации в слайдерах и иконка в кнопке "Загрузить фото"-->
+   <svg display="none">
+      <symbol id="arrow" width="33" height="9" viewBox="0 0 33 9" xmlns="http://www.w3.org/2000/svg">
+         <path d="M0.646446 4.74033C0.451183 4.54507 0.451183 4.22849 0.646446 4.03323L3.82843 0.851246C4.02369 0.655984 4.34027 0.655984 4.53553 0.851246C4.7308 1.04651 4.7308 1.36309 4.53553 1.55835L1.70711 4.38678L4.53553 7.21521C4.7308 7.41047 4.7308 7.72705 4.53553 7.92231C4.34027 8.11758 4.02369 8.11758 3.82843 7.92231L0.646446 4.74033ZM33 4.88678H1V3.88678H33V4.88678Z"/>
+      </symbol>
+      <symbol id="download" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M21.5 15V19C21.5 19.5304 21.2893 20.0391 20.9142 20.4142C20.5391 20.7893 20.0304 21 19.5 21H5.5C4.96957 21 4.46086 20.7893 4.08579 20.4142C3.71071 20.0391 3.5 19.5304 3.5 19V15" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+         <path d="M7.5 10L12.5 15L17.5 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+         <path d="M12.5 15V3" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+   </svg>
+   <!-- Четвертая секция - слайдер с фотографиями -->
+   <section class="page-four">
+      <div class="block-congratulations">
+         <h2 class="title-h2">Поздравления</h2>
+         <div class="swiper-container slider">
+            <!--обязательная оболочка-->
+            <div class="swiper-wrapper">
+               <!--контент 1 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo01.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+               <!--контент 2 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+               <!--контент 3 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo01.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+               <!--контент 4 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo03.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+               <!--контент 5 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo04.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+               <!--контент 6 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+               <!--контент 7 слайда-->
+               <div class="swiper-slide">
+                  <div class="swiper-slide-card">
+                      <img src="img/congratulations/photo03.png" alt="teacher photo" class="swiper-slide-card__img">
+                      <div class="swiper-slide-card__cover"></div>
+                  </div>
+               </div>
+            </div>
+            <!--пагинация-->
+            <div class="pagination-block">
+               <div class="swiper-button-prev swiper-button">
+                  <svg class="swiper-button-svg">
+                     <use xlink:href='#arrow'></use>
+                  </svg>
+               </div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button swiper-button-next">
+                  <svg class="swiper-button-svg swiper-button-svg_next">
+                     <use xlink:href='#arrow'></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Пятая секция - слайдер с открытками -->
+   <section class="page-five">
+      <div class="block-postcards">
+         <h2 class="title-h2">Поздравь учителя!</h2>
+         <p class="block-postcards__subtitle">
+            Сделай поздравительную открытку
+         </p>
+         <div class="swiper-container slider-postcards">
+            <!--обязательная оболочка-->
+            <div class="swiper-wrapper">
+               <!--контент 1 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img01.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
+               <!--контент 2 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img02.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
+               <!--контент 3 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img03.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
+               <!--контент 4 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img01.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
+               <!--контент 5 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img02.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
+            </div>
+            <!--пагинация-->
+            <div class="pagination-block">
+               <div class="swiper-button-prev swiper-button">
+                  <svg class="swiper-button-svg">
+                     <use xlink:href='#arrow'></use>
+                  </svg>
+               </div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button-next swiper-button">
+                  <svg class="swiper-button-svg swiper-button-svg_next">
+                     <use xlink:href='#arrow'></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <label class="download-btn">
+            <svg class="download-btn__svg">
+               <use xlink:href='#download'></use>
+            </svg>
+            Загрузить фото
+            <input type="file" class="download-btn__input">
+         </label>
+
+         <p class="block-postcards__description">Формат - .jpg, .jpeg, .png, .tiff, .bmp</p>
+      </div>
+   </section>
+   <!-- footer -->
+   <footer>
+      <div class="container">
+         <div class="footer">
+            <a href="index.html" class="footer__logo">Мы-<span>Учителям</span>!</a>
+            <div class="footer-info">
+               <div class="informations">
+                  <div class="informations-item informations-item_footer">
+                     <a href="#" class="informations-link informations-link_footer">
+                        Поздравления
+                     </a>
+                     <a href="#" class="informations-link informations-link_footer">
+                        Акции
+                     </a>
+                     <a href="#" class="informations-link informations-link_footer">
+                        Открытки
+                     </a>
+                  </div>
+               </div>
+               <div class="contacts">
+                  <a href="tel:+70000000000" class="contacts__text">+7 (000) 000-00-00</a>
+                  <a href="mailto:mail@mail.ru" class="contacts__email">mail@mail.ru</a>
+                  <div class="social-media">
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-twitter.svg" alt="twitter" class="social-media__img">
+                     </a>
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-tiktok.svg" alt="tiktok" class="social-media__img">
+                     </a>
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-yandexdzen.svg" alt="yandexdzen" class="social-media__img">
+                     </a>
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-youtube.svg" alt="youtube" class="social-media__img">
+                     </a>
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-facebook.svg" alt="facebook" class="social-media__img">
+                     </a>
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-vk.svg" alt="VK" class="social-media__img">
+                     </a>
+                     <a href="#" class="social-media__link">
+                        <img src="img/icon-instagram.svg" alt="instagram" class="social-media__img">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="scripts/script.js"></script>
+</body>
+</html>
