@@ -9,9 +9,12 @@ $white-clr: #FFF;
 
 body {
    font-family: 'Roboto Slab', serif;
-   max-width: 1920px;
    margin: auto;
    background: #F2F2F2;
+}
+
+.modal-is-active {
+   overflow: hidden;
 }
 
 .container {
@@ -142,6 +145,7 @@ body {
    left: 0;
    background: rgba(0, 0, 0, 0.5);
    pointer-events: none;
+   z-index: 5;
 }
 
  #overlay.active {
@@ -153,7 +157,8 @@ body {
 .about-info-container {
    display: flex;
    justify-content: center;
-   padding-left: 300px; /*отступ на ширину вертикальной левой картинки*/ 
+   /*отступ на ширину вертикальной левой картинки*/ 
+   padding-left: 300px;
 }
 
 .about-info {
@@ -164,7 +169,7 @@ body {
    &__signature {
       color: $brown-clr;
       font-size: 12.5px;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
    }
    &__signature {
       font-size: 10px;
@@ -174,7 +179,7 @@ body {
 .about-info-wrapper {
    position: relative;
    padding-left: 53px;
-   margin-bottom: 74px;
+   margin-bottom: 76px;
    &::before {
       content: '';
       display: block;
@@ -269,6 +274,7 @@ body {
    left: 0;
    background: rgba(0, 0, 0, 0.5);
    pointer-events: none;
+   z-index: 5;
 }
 
 #popupoverlay.active {
@@ -288,13 +294,34 @@ iframe {
    .blok-info {
       position: relative;
       padding: 97px 0 88px;
-      &__img {
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         overflow: hidden;
-         max-width: 274px;
-      }
+   }
+}
+
+/*Вертикальный слайдер: основные стили см. в слайдере с фотографиями (который в <section class="page-four"> )*/
+.vertical-slider {
+   position: absolute;
+   bottom: 0;
+   left: -6px;
+}
+
+.slider-vertical {
+   height: 729px;
+   .swiper-slide {
+      height: 274px !important;
+   }
+   .swiper-slide-card {
+      width: 274px;
+      min-width: 274px;
+      min-height: 270px;
+   }
+   .swiper-slide-card__img {
+      width: 193px;
+      z-index: -1;
+      height: 270px;
+   }
+   .swiper-slide-card__cover {
+      background: url(../img/vertical-slider/frame.png) no-repeat;
+      height: 274px;
    }
 }
 
@@ -326,17 +353,19 @@ iframe {
 
 .page-three {background: $light-yellow-clr;}
 
-.container-quote {width: 65%;}
+.container-quote {
+   position: relative;
+   left: -33px;
+}
 
 .blok-quote {
    padding: 150px 0 135px;
    display: flex;
    align-items: flex-start;
-   justify-content: flex-start;
+   justify-content: space-between;
    flex-wrap: wrap;
-   gap: 18px;
    .quote {
-      width: 31%;
+      width: 32%;
       color: $brown-clr;
       font-family: 'Montserrat', sans-serif;
    }
@@ -344,7 +373,9 @@ iframe {
 
 .author {
    display: flex;
-   align-items: flex-start;
+   align-items: center;
+   gap: 6px;
+   margin-bottom: 20px;
 }
 
 .avatar-cover {
@@ -353,7 +384,6 @@ iframe {
    width: 183px;
    height: 184px;
    overflow: hidden;
-   margin-bottom: 20px;
    &__img {
       position: absolute;
       width: 121px;
@@ -378,11 +408,12 @@ iframe {
 
 .author-description {
    width: 50%;
-   padding-top: 40px;
+   margin-top: -25px;
    &__name {
       font-family: 'Roboto Slab', serif;
       font-size: 16px;
-      margin-bottom: 22px;
+      line-height: 131%;
+      margin-bottom: 15px;
    }
    &__signature {
       font-size: 14px;
@@ -415,9 +446,13 @@ iframe {
    position: relative;
 }
 
+.slider .swiper-slide {
+   width: auto;
+}
+
 .swiper-slide {
    display: flex;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
 }
 
@@ -482,7 +517,7 @@ iframe {
 /*перебитие дефолтных кружков у пагинации*/
 .swiper-pagination {
    position: relative !important;
-   width: 20% !important;
+   width: 7.8% !important;
    bottom: 0 !important;
    .swiper-pagination-bullet {
       background: linear-gradient(180deg, #FFC500 0%, #FF9346 100%);
@@ -512,6 +547,14 @@ iframe {
 
 /************начало второго слайдера**********************/
 .slider-postcards {margin: auto;}
+
+.slider-postcards .swiper-pagination {
+   width: 15% !important;
+}
+
+.slider-postcards .swiper-slide {
+   justify-content: center;
+}
 
 .postcard {
    position: relative;
@@ -556,7 +599,8 @@ iframe {
    &__svg {
       width: 25px;
       height: 25px;
-      fill: $white-clr;
+      fill: none;
+      stroke: $white-clr;
    }
    &:hover {
       background: $red-clr;
@@ -584,7 +628,8 @@ footer {background: $yellow-clr;}
       font-size: 43px;
       text-transform: uppercase;
       color: $brown-clr;
-      letter-spacing: 2px;
+      padding-bottom: 8px;
+      letter-spacing: 1.8px;
       transition: 0.3s;
       span {
          background: $brown-clr;
@@ -635,13 +680,15 @@ footer {background: $yellow-clr;}
 
 .contacts__email {margin-bottom: 25px;}
 
+
 @media (max-width: 1910px) {
    .container {
       width: 80%;
    }
 
-   .container-quote {
-      width: 90%;
+   .swiper-pagination,
+   .slider-postcards .swiper-pagination {
+      width: 20% !important;
    }
 }
 
@@ -651,7 +698,7 @@ footer {background: $yellow-clr;}
    }
 
    .container-quote {
-      width: 100%;
+      left: 0;
    }
 }
 
@@ -684,12 +731,12 @@ footer {background: $yellow-clr;}
 
 @media (min-width: 1920px) {
    .slider-postcards {
-      width: 55%;
+      width: 53%;
    }
 }
 
 @media (max-width: 1180px) {
-   .blok-info__img {
+   .vertical-slider {
       display: none;
    }
 
@@ -712,6 +759,7 @@ footer {background: $yellow-clr;}
 
    .blok-quote {
       justify-content: center;
+      gap: 30px;
       .quote {
          width: 100%;
       }
@@ -766,7 +814,8 @@ footer {background: $yellow-clr;}
 }
 
 @media (max-width: 768px) {
-   .swiper-pagination {
+   .swiper-pagination,
+   .slider-postcards .swiper-pagination {
       width: 40% !important;
    }
 
@@ -815,7 +864,7 @@ footer {background: $yellow-clr;}
 
    .author-description {
       width: 100%;
-      padding: 0 0 30px;
+      margin: 0;
    }
 
    .author-description__name {
@@ -870,6 +919,11 @@ footer {background: $yellow-clr;}
    .block-congratulations {
       padding: 40px 0;
    }
+
+   .swiper-slide-card {
+      width: auto;
+   }
+
    .swiper-slide-card__cover {
       display: none;
    }
@@ -880,7 +934,7 @@ footer {background: $yellow-clr;}
          display: none;
       }
    }
-   
+
    iframe {
       height: 250px;
    }

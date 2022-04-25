@@ -14,6 +14,7 @@
 <body>
    <!-- первая секция - желтая -->
    <div class="page-one">
+      <a name="top"></a>
       <div class="container">
          <div class="block-about">
             <div class="about-social">
@@ -49,10 +50,10 @@
                   <div class="modal" id="modal">
                      <button data-close-button class="close-button">&times;</button>
                      <nav class="informations-item">
-                        <a href="#" class="informations-link">Поздравления</a>
-                        <a href="#" class="informations-link">О Проекте</a>
+                        <a href="#congratulations" class="informations-link">Поздравления</a>
+                        <a href="#top" class="informations-link">О Проекте</a>
                         <a href="#" class="informations-link">Акции</a>
-                        <a href="#" class="informations-link">Открытки</a>
+                        <a href="#postcards" class="informations-link">Открытки</a>
                      </nav>
                      <div class="social-media">
                         <a href="#" class="social-media__link">
@@ -98,7 +99,7 @@
             <div class="popup-menu">
                <div class="popupmodal" id="popupmodal">
                <button data-popupclose-button class="popup-close-button">&times;</button>
-                  <iframe src="https://www.youtube.com/embed/15FchEr1oGU"></iframe>
+                  <iframe src="" class="iframe"></iframe>
                </div>
                <div id="popupoverlay"></div>
             </div>
@@ -109,14 +110,52 @@
    <header class="page-two">
       <div class="container">
          <div class="blok-info">
-            <img src="img/photo-vertical.png" alt="" class="blok-info__img">
+            <div class="vertical-slider">
+               <div class="swiper-container slider-vertical">
+                  <!--обязательная оболочка-->
+                  <div class="swiper-wrapper">
+                     <!--контент 1 слайда-->
+                     <div class="swiper-slide">
+                        <div class="swiper-slide-card">
+                           <img src="img/vertical-slider/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                           <div class="swiper-slide-card__cover"></div>
+                       </div>
+                     </div>
+                     <!--контент 2 слайда-->
+                     <div class="swiper-slide">
+                        <img src="img/vertical-slider/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                           <div class="swiper-slide-card__cover"></div>
+                     </div>
+                     <!--контент 3 слайда-->
+                     <div class="swiper-slide">
+                        <img src="img/vertical-slider/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                           <div class="swiper-slide-card__cover"></div>
+                     </div>
+                     <!--контент 4 слайда-->
+                     <div class="swiper-slide">
+                        <img src="img/vertical-slider/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                           <div class="swiper-slide-card__cover"></div>
+                     </div>
+                     <!--контент 5 слайда-->
+                     <div class="swiper-slide">
+                        <img src="img/vertical-slider/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                           <div class="swiper-slide-card__cover"></div>
+                     </div>
+                     <!--контент 6 слайда-->
+                     <div class="swiper-slide">
+                        <img src="img/vertical-slider/photo02.png" alt="teacher photo" class="swiper-slide-card__img">
+                           <div class="swiper-slide-card__cover"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
             <div class="informations">
                <nav class="informations-item">
-                  <a href="#" class="informations-link">
+                  <a href="#congratulations" class="informations-link">
                      <img src="img/info-icon01.svg" alt="congratulations" class="informations-link__img">
                      Поздравления
                   </a>
-                  <a href="#" class="informations-link">
+                  <a href="#top" class="informations-link">
                      <img src="img/info-icon02.svg" alt="about the project" class="informations-link__img">
                      О Проекте
                   </a>
@@ -124,7 +163,7 @@
                      <img src="img/info-icon03.svg" alt="stock" class="informations-link__img">
                      Акции
                   </a>
-                  <a href="#" class="informations-link">
+                  <a href="#postcards" class="informations-link">
                      <img src="img/info-icon04.svg" alt="postcards" class="informations-link__img">
                      Открытки
                   </a>
@@ -182,13 +221,14 @@
          <path d="M0.646446 4.74033C0.451183 4.54507 0.451183 4.22849 0.646446 4.03323L3.82843 0.851246C4.02369 0.655984 4.34027 0.655984 4.53553 0.851246C4.7308 1.04651 4.7308 1.36309 4.53553 1.55835L1.70711 4.38678L4.53553 7.21521C4.7308 7.41047 4.7308 7.72705 4.53553 7.92231C4.34027 8.11758 4.02369 8.11758 3.82843 7.92231L0.646446 4.74033ZM33 4.88678H1V3.88678H33V4.88678Z"/>
       </symbol>
       <symbol id="download" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
-         <path d="M21.5 15V19C21.5 19.5304 21.2893 20.0391 20.9142 20.4142C20.5391 20.7893 20.0304 21 19.5 21H5.5C4.96957 21 4.46086 20.7893 4.08579 20.4142C3.71071 20.0391 3.5 19.5304 3.5 19V15" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-         <path d="M7.5 10L12.5 15L17.5 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-         <path d="M12.5 15V3" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+         <path d="M21.5 15V19C21.5 19.5304 21.2893 20.0391 20.9142 20.4142C20.5391 20.7893 20.0304 21 19.5 21H5.5C4.96957 21 4.46086 20.7893 4.08579 20.4142C3.71071 20.0391 3.5 19.5304 3.5 19V15" stroke-linecap="round" stroke-linejoin="round"/>
+         <path d="M7.5 10L12.5 15L17.5 10" stroke-linecap="round" stroke-linejoin="round"/>
+         <path d="M12.5 15V3"  stroke-linecap="round" stroke-linejoin="round"/>
       </symbol>
    </svg>
    <!-- Четвертая секция - слайдер с фотографиями -->
    <section class="page-four">
+      <a name="congratulations"></a>
       <div class="block-congratulations">
          <h2 class="title-h2">Поздравления</h2>
          <div class="swiper-container slider">
@@ -263,6 +303,7 @@
    </section>
    <!-- Пятая секция - слайдер с открытками -->
    <section class="page-five">
+      <a name="postcards"></a>
       <div class="block-postcards">
          <h2 class="title-h2">Поздравь учителя!</h2>
          <p class="block-postcards__subtitle">
@@ -301,6 +342,18 @@
                      <img src="img/postcards/img02.png" alt="Postcard" class="postcard__img">
                   </div>
                </div>
+               <!--контент 6 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img03.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
+               <!--контент 7 слайда-->
+               <div class="swiper-slide">
+                  <div class="postcard">
+                     <img src="img/postcards/img01.png" alt="Postcard" class="postcard__img">
+                  </div>
+               </div>
             </div>
             <!--пагинация-->
             <div class="pagination-block">
@@ -317,14 +370,15 @@
                </div>
             </div>
          </div>
-         <label class="download-btn">
-            <svg class="download-btn__svg">
-               <use xlink:href='#download'></use>
-            </svg>
-            Загрузить фото
-            <input type="file" class="download-btn__input">
-         </label>
-
+         <form action="#" method="post" enctype="multipart/form-data">
+            <label class="download-btn">
+               <svg class="download-btn__svg">
+                  <use xlink:href='#download'></use>
+               </svg>
+               Загрузить фото
+               <input type="file" class="download-btn__input">
+            </label>
+         </form>
          <p class="block-postcards__description">Формат - .jpg, .jpeg, .png, .tiff, .bmp</p>
       </div>
    </section>
@@ -336,13 +390,13 @@
             <div class="footer-info">
                <div class="informations">
                   <div class="informations-item informations-item_footer">
-                     <a href="#" class="informations-link informations-link_footer">
+                     <a href="#congratulations" class="informations-link informations-link_footer">
                         Поздравления
                      </a>
                      <a href="#" class="informations-link informations-link_footer">
                         Акции
                      </a>
-                     <a href="#" class="informations-link informations-link_footer">
+                     <a href="#postcards" class="informations-link informations-link_footer">
                         Открытки
                      </a>
                   </div>
