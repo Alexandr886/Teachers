@@ -1,0 +1,55 @@
+Версия сайта ОВЗ для слабовидящих.
+Для того, чтобы добавить версию ОВЗ на сайт, можно использовать этот скрипт (comfortable-reading.zip)
+
+Внедрение:
+1) Вставить папку “comfortable-reading” из архива в папку с библиотеками (или в любое удобное место) на сайте (например папка “add” в корне сайта);
+
+2) Подключить скрипты после jQuery (желательно в футере) 
+    <!-- comfortable reading -->
+    <script src="/add/comfortable-reading/js/jquery.comfortable.reading.js"></script>
+    <script src="/add/comfortable-reading/js/jquery.cookie.js"></script>
+
+3) В месте, где должна отображаться кнопка для изменения версии, вставить этот код:
+    <!-- comfortable reading -->
+    <div class="ovz270721-button-wrap">
+        <a href="#" id="cr_version_link">Версия для слабовидящих</a>
+    </div>
+
+Базовые настройки готовы. 
+Теперь, после нажатия кнопки “Версия для слабовидящих” сайт должен измениться, примерно вот-так: https://snipboard.io/M7qTAP.jpg
+При нажатии на кнопки изменения размера шрифта или цвета фона в тег “body” будет добавлен соответствующий класс, к которому можно прицепить стили для любого  элемента на сайте.
+ 
+
+___
+
+EXAMPLE:
+___
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Версия сайта ОВЗ для слабовидящих</title>
+</head>
+<body>
+
+	<!-- comfortable reading -->
+    <div class="ovz270721-button-wrap">
+        <a href="#" id="cr_version_link">Версия для слабовидящих</a>
+    </div>
+
+    <h1>Lorem ipsum dolor</h1>
+
+    <p>
+    	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officiis quas perspiciatis cumque quo fugiat, ullam nobis nisi cupiditate iste est culpa accusantium, itaque quam sit, natus alias aspernatur molestiae!
+    </p>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- comfortable reading -->
+	<script src="/add/comfortable-reading/js/jquery.comfortable.reading.js"></script>
+	<script src="/add/comfortable-reading/js/jquery.cookie.js"></script>
+	
+</body>
+</html>
